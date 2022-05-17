@@ -6,7 +6,7 @@
 	],
 	"settings": {
 		"code-runner.clearPreviousOutput": true,
-		"code-runner.customCommand": "cls",
+		"code-runner.customCommand": "",
 		"code-runner.defaultLanguage": "",
 		"code-runner.enableAppInsights": false,
 		"code-runner.preserveFocus": false,
@@ -63,7 +63,7 @@
 			"fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
 		},
 		"code-runner.respectShebang": false,
-		"code-runner.saveAllFilesBeforeRun": true,
+		"code-runner.saveAllFilesBeforeRun": false,
 		"code-runner.runInTerminal": true
 	}
 }
