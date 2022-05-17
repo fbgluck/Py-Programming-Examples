@@ -15,9 +15,9 @@ print('starting plot....(see seperate window for plot on toolbar')
 # Set up x axis
 x=np.arange(0,100,1)  # start,stop,step
 # set up y axis
-y = 4*((-1)**(x+1)/(2*x-1))
-plt.title("Function Plot")
-plt.xlabel("x axis caption")
-plt.ylabel("y axis caption")
-plt.plot(x,y)
-plt.show()
+y = 4*((-1)**(x+1)/(2*x-1)) 
+plt.title("Function Plot") # Caption for the title
+plt.xlabel("x axis caption") #Caption for the X Axis
+plt.ylabel("y axis caption") # Caption for the Y Axis
+plt.plot(x,y) #This actually creates the plot
+plt.show() # Because nothing happens if you don't do this
