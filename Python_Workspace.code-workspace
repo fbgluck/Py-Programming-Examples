@@ -64,6 +64,8 @@
 		},
 		"code-runner.respectShebang": false,
 		"code-runner.saveAllFilesBeforeRun": false,
-		"code-runner.runInTerminal": true
+		"code-runner.runInTerminal": true,
+		"editor.formatOnSave": true,
+		"editor.formatOnType": true
 	}
 }

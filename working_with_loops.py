@@ -4,6 +4,7 @@ print("Hello World")
 # For Loop
 startCounting = 1
 startCounting=int(input('Where do you want to start:'))
+#Range is a built-in function that will interate from start to stop
 for i in range(startCounting,startCounting+10):
     print (f'The number is {i}')
 

@@ -11,12 +11,16 @@
 # selected interpreter, too):
 import numpy as np
 from matplotlib import pyplot as plt
+import math
 print('starting plot....(see seperate window for plot on toolbar')
 # Set up x axis
 x=np.arange(0,100,1)  # start,stop,step
+print (f"The value of x is {x}")
 # set up y axis
-y = 4*((-1)**(x+1)/(2*x-1)) 
-plt.title("Function Plot") # Caption for the title
+y =(1/x**2)+1
+# y = ((math.sin(x))/x)
+# y=math.cos(x)
+plt.title("y =(1/x**2)+1")  # Caption for the title
 plt.xlabel("x axis caption") #Caption for the X Axis
 plt.ylabel("y axis caption") # Caption for the Y Axis
 plt.plot(x,y) #This actually creates the plot
