@@ -3,7 +3,7 @@
 # fractional part using math.modf()
 import math
 from decimal import Decimal
-test_amount = input("Enter a number with two decimal points: ")
+test_amount = input("Enter a number with two decimal places: ")
 print(f"You Entered the string: {test_amount}")
 float_amount = float(test_amount)
 print(f"Conversion to float gives {float_amount}")
@@ -19,4 +19,4 @@ print("*"*5, " Using String Slicing and Int Conversion ", "*"*5)
 print(
     f"The last two sliced characters of string input are: {test_amount[-2:]}")
 fraction_part = int(test_amount[-2:])
-print(f"Fraction Part converted to string then to int is: {fraction_part}")
+print(f"Fraction part of input string converted to int is: {fraction_part}")

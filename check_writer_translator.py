@@ -6,7 +6,7 @@ import math
 # Functions
 
 
-def num_to_english(num, digit_place):
+def num_to_english(num, digit_place, result_string):
     """ Translates a number to english equiv
         Inputs:
             Num -  Number to be translated as integer
@@ -14,19 +14,22 @@ def num_to_english(num, digit_place):
         """
     idx = num % 10  # gives you the whole number of the next place
     if idx > 2 and idx < 10 and digit_place == 1:  # Process twenty through ninety
-        print(f"{numeral_names[idx]} {places[digit_place]}")
+        result_string = numeral_names[idx] + \
+            places[digit_place] + result_string
+        # print(f"{numeral_names[idx]} {places[digit_place]}")
     else:  # otherwise, work on hundereds forward
-        print(f"{numeral_names[idx]} {places[digit_place]} ")
+        results_string = numeral_names[idx] + places[digit_place]
 
     if num/10 > 1:  # We have more digits to process
         digit_place = digit_place + 1  # Process the next place
         # // is the operation that returns the whole number of a division
-        num_to_english(num//10, digit_place)
-    return("Done....")
+        num_to_english(num//10, digit_place, result_string)
+    return(result_string)
 
 
 # Initialize variables
 ones_place = 0
+english_string = "cents"
 # Dictionary of Names
 numeral_names = {
     0: "zero",
@@ -49,6 +52,8 @@ numeral_names = {
     17: "Seventeen",
     18: "Eighteen",
     19: "Nineteen"
+
+
 }
 tens_places = {
     0: "",
@@ -79,35 +84,24 @@ text_numeral = input("What is the amount of the check?")
 float_numeral = float(text_numeral)
 # breaks up the floating part into whole part an decimal part
 # Returns a tuple - multiple items in a single variable.
-
+decimal_part, whole_part = math.modf(float_numeral)
 # More conversion so we can work with the numbers
+
 whole_part = int(whole_part)
-decimal_part = int(decimal_part)
+# decimal_part = int(decimal_part*100)
+decimal_part = int(text_numeral[-2:])
 print(f"You input: {float_numeral}")
 print(f"Whole Number part is: {whole_part}")
 print(f"Decimal part is: {decimal_part}")
 # Is there a decimal portion of the number?
 if decimal_part != 0:  # we found a decimal point
-    num_to_english(decimal_part, 2)
-    print("cents")
-
+    print(num_to_english(decimal_part, 1, english_string))
 # Work with Tens and Ones Numbers
 
 if whole_part > 0:
     # Get the name of the numeral from the dictionary
-    if tens_and_ones > 0 and tens_and_ones < 20:  # between 1 and 19
-        print(f"Translated: {numeral_names.get(tens_and_ones)} dollars")
-        float_numeral = int(float_numeral/100)
-        print(f'Float Numeral is now: {float_numeral}')
-        # We have processed the tens and ones
-    else:
-        tens_flag = True  # we started processing at the tens portion
-        num_to_english(float_numeral, 1)
-
-# We now have a whole number where the tens and ones
-# have been processed so we now work with Hundreds forward
-if not (tens_flag):
-    hundreds = float_numeral % 10
-    if hundreds > 0:
-        # for digit_number in range(1,len(str(hundreds))):
-        num_to_english(float_numeral, 3)
+    # if whole_part > 0 and whole_part < 20:  # between 1 and 19
+    print({num_to_english(whole_part, 1, english_string)})
+    print(" dollars")
+    # else:
+ #   num_to_english(float_numeral, 1)
