@@ -1,6 +1,10 @@
 # This is an experiment to show what happens to precision
-# of a number when attempting to find the decimal part and
+# of a floating point number when attempting to find the decimal part and
 # fractional part using math.modf()
+# You should read this article to undertstand more about
+# how floating point numbers are represented inside a machine
+# and why this may (or may not) be a problem
+# https: // docs.python.org/3/tutorial/floatingpoint.html
 import math
 from decimal import Decimal
 test_amount = input("Enter a number with two decimal places: ")

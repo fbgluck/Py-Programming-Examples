@@ -12,6 +12,7 @@ def num_to_english(num, digit_place, result_string):
             Num -  Number to be translated as integer
             Digit place - place (e.g tens = 2, hundreds = 3... etc) as integer
         """
+# Modulus: % returns the remainder when the first operand is divided by the second
     idx = num % 10  # gives you the whole number of the next place
     if idx > 2 and idx < 10 and digit_place == 1:  # Process twenty through ninety
         result_string = numeral_names[idx] + \
