@@ -21,12 +21,13 @@ print("the variable type of samplefloat is", type(
 # The dir function will show all methods of an object passed to it
 # print(dir(samplefloat))
 
-#More Examples and a shortcut for declairing multiple variables at once
+# More Examples and a shortcut for declairing multiple variables at once
 
 test_score = 45  # snake case
+myScore = 34  # Camelback
 PI = 3.14  # constant
 a, b, c = 1, 29, 54  # shortcut (I think this makes code harder to read)
-#same as:
-a = 1 # I can provide a comment for each variable describing its use
+# same as:
+a = 1  # I can provide a comment for each variable describing its use
 b = 29
 c = 54
