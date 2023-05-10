@@ -1,0 +1,14 @@
+#Fibbonachi Sequence   
+#Ask for how many numbers you want to calculate
+finishLoopCount = int(input"How many values in the sequence do you want to count?")
+#print the starting position numbers
+#assign the first two numbers
+firstNumber = 1
+secondNumber = 1
+currentLoopCount = 1
+#print the values
+print (f"Current loop count: {currentLoopCount} - Sequence:{firstNumber},{secondNumber} -- {firstNumber+secondNumnber}")
+#Loop for counter in range (counter,101,1)
+#canculate the next number in the sequence
+#add the two numbers
+# print the output

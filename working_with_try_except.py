@@ -6,6 +6,10 @@
 # ref: https://www.programiz.com/python-programming/exceptions
 # ref: https://docs.python.org/3/library/exceptions.html
 
+# The ** try ** block lets you test a block of code for errors.
+# The ** except ** block lets you handle the error.
+# The ** else ** block lets you execute code when there is no error.
+# The ** finally ** block lets you execute code, regardless of the result of the try- and except blocks.'''
 print("Start test...")
 try:  # This is the code that will be executed
     x = input(" Enter a letter (to throw an error) or a number: ")
@@ -25,5 +29,5 @@ else:   # If the code in try does not throw an error
     # the code in else is executed
     print(f"Coversion was successful: x={x}")
 finally:    # This code is executed regardless
-    # of the result of the code in try
-    print(f" \n*** This is the code in finally ***")
+    # of the result of the code in try10
+    print(f" \n*** This is the code in the finally clause ***")
