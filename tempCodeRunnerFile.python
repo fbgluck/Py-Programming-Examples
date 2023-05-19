@@ -1,14 +1,18 @@
-#Fibbonachi Sequence   
-#Ask for how many numbers you want to calculate
-finishLoopCount = int(input"How many values in the sequence do you want to count?")
-#print the starting position numbers
-#assign the first two numbers
-firstNumber = 1
-secondNumber = 1
-currentLoopCount = 1
-#print the values
-print (f"Current loop count: {currentLoopCount} - Sequence:{firstNumber},{secondNumber} -- {firstNumber+secondNumnber}")
-#Loop for counter in range (counter,101,1)
-#canculate the next number in the sequence
-#add the two numbers
-# print the output
+# Working_with_function_scopes
+def test_scopes ():
+    in_scope = 4
+    return (in_scope)
+
+def test_scopes_2(x):
+    print (f"Inside function...x = {x}")
+    x = x**x
+    print (f"x squared = {x}")
+    return (x)
+
+#Main Program begins here
+# print (in_scope)
+print (test_scopes)
+
+x=5
+print (f"Return from function with {test_scopes_2(x)}")
+print (f"The value of x is: {x}")
