@@ -1,18 +1,11 @@
-# Working_with_function_scopes
-def test_scopes ():
-    in_scope = 4
-    return (in_scope)
-
-def test_scopes_2(x):
-    print (f"Inside function...x = {x}")
-    x = x**x
-    print (f"x squared = {x}")
-    return (x)
-
-#Main Program begins here
-# print (in_scope)
-print (test_scopes)
-
-x=5
-print (f"Return from function with {test_scopes_2(x)}")
-print (f"The value of x is: {x}")
+# Demonstration for Debugger
+for i in range(1,5): # outer loop
+    print(f"** {i} - in outer loop")
+    for j in range (1,3):   # inner loop
+        print(f"    in inner loop i={i} -- j =={j}")
+        if j%2 == 0:
+            print(f"      {j} is an even number ")
+        else:
+            print (f"     {j} is an odd number")
+print(f"Final values: i = {i}, j= {j}")
+print (30*"-")
