@@ -1,17 +1,48 @@
-# # Sample Code for list methods
+# # Sample Code for Working With Lists and their Methods
 
+## Lists are a built-in Python Data Type that are used to 
+## store multiple items in a single variable.
+
+# ------- This stuff is used to make the output readable ------------------------
 line_sep = '*'*30 #This is a global variable known to all functions
 def fn_line_seperator():
    print(f"\n{line_sep}\n")
 # ------------------------------
-      
+
+## -- PROGRAM STARTS HERE --
+
+# Syntax used to Define A List
+major_authors=['Lee','Orwell','Fitzgerald','Salinger']
+mixed_list=['First',1,'Second',2,'Third',3]
+
+# Using two lists together
+shs_football_scores= [27,12,17,15,0]
+shs_football_opponents=['York','Noble','Portland','Massabesic','Marshwood']
+print (f'The score against {shs_football_opponents[1]} was {shs_football_scores[1]}')
+fn_line_seperator()
+
+# How would you print a scorecard for SHS football for these 5 games. Hint -- user iteration / for / range
+
+
+# The first list entry is item "0"
+print (major_authors[3]) #gives you the fourth entry in the list
+fn_line_seperator()
+
+# Lists can be manipulated and queried (added to, subtracted etc using 'methods')
 #*********** .append method *****************
+
 #.append = appends a value to a list
 shopping_list=['apples','bacon','carrots','doughnuts']
 new_list = shopping_list.append('eggs')
 #new_list is empty because .append method modifies in place -- a new list is not created.
 print(f'new_list is now: {new_list}')
 print(f'shopping_list is now: {shopping_list}')
+fn_line_seperator()
+
+# .index = returns the location of the first matching value in the list
+print(f'Our shopping list is now: {shopping_list}')
+location=shopping_list.index('bacon')
+print (f'bacon appears in the list as item number {location}')
 fn_line_seperator()
 
 # We can assign one list to another variable to make a copy of it
@@ -124,3 +155,8 @@ test_list = ['c','g','a','w']
 test_list.sort()
 test_list.reverse()
 print('The sorted, reverse list is: ',test_list,'\n',30*'-','\n')
+
+# Generating Lists
+# The following will create a list with the squares of 4 - 6
+numbers = [x*x for x in range(4,7)]
+print (numbers)

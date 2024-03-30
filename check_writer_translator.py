@@ -14,7 +14,7 @@ def num_to_english(num, digit_place, result_string):
         """
 # Modulus: % returns the remainder when the first operand is divided by the second
     idx = num % 10  # gives you the whole number of the next place
-    if idx > 2 and idx < 10 and digit_place == 1:  # Process twenty through ninety
+    if idx >= 1 and idx <= 9 and digit_place == 1:  # Process twenty through ninety
         result_string = numeral_names[idx] + \
             places[digit_place] + result_string
         # print(f"{numeral_names[idx]} {places[digit_place]}")
@@ -30,7 +30,7 @@ def num_to_english(num, digit_place, result_string):
 
 # Initialize variables
 ones_place = 0
-english_string = "cents"
+english_string = " cents"
 # Dictionary of Names
 numeral_names = {
     0: "zero",

@@ -46,6 +46,10 @@ def fancy_av(prompt, num):
     else:
         return -num
 
+# This function calculates the number of quarters you will get based
+# on the bill you insert in the machine
+def change_machine(amount_inserted):
+    return (amount_inserted/.25)
 
 # ----------End of Function Defs ----------------------------
 #  Main Program Starts Here
@@ -61,6 +65,7 @@ print(30*'-')
 user_length = int(input("What is the length of the field? >> "))
 user_width = int(input("What is the width of the field? >> "))
 print(f'Calling function from main program')
+
 # We call the function here
 total_area = fn_field_area(user_length, user_width)
 print(f'We are back in the main program')

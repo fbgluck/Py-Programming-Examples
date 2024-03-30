@@ -1,5 +1,10 @@
 {
     "code-runner.runInTerminal": true,
     "code-runner.clearPreviousOutput": true,
-    "editor.formatOnType": false
+    "editor.formatOnType": false,
+    "editor.fontSize": 22,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
 }
