@@ -14,6 +14,24 @@
 # 121 3
 # 121 _
 # Data Structures
-stack_1 = [6, 5, 4, 3, 2, 1]
-stack_2 = []
-stack_3 = []
+
+# Print the three stacks of disks
+def print_stack():
+    for i in range(0,5):
+        print (f"  {stack_1[i]}\t",end="\t")
+        print (f"   {stack_2[i]}\t",end ="\t")
+        print (f"   {stack_3[i]}")
+    # Print the base of each tower
+    print (5*"=","\t\t",5*"=","\t\t",5*"=")
+
+def makemove (last_value):
+    print("")
+    
+
+# Program starts here
+
+# set initial stack of disks
+stack_1 = [1,2,3,4,5]
+stack_2 = ["|","|","|","|","|","|"]
+stack_3 = ["|","|","|","|","|","|"]
+print_stack()

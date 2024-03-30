@@ -14,11 +14,11 @@ print(combined)
 val = 12.3
 
 print(f'2 decimal places: {val:.2f}')
-print(f'3 decimal places: {val:.5f}')
+print(f'5 decimal places: {val:.5f}')
 print ("----------- Columns ----------------------")
 # f strings in columns :n  where n = number of spaces in the column
 for x in range(1, 11): # ** is the exponent operator
-    #Note: ^ is bitwise OR
+    #Note: ^ is bitwise OR ** is exponentiation
     print(f'{x:2} {(x**2):3} {(x**3):4}')
 
 print("---------- Right Justified Strings-----------------------")
@@ -35,11 +35,12 @@ print(f'{s2:>10}')
 print(f'{s3:>10}')
 print(f'{s4:>10}')
 
-print ("---------- Formatting Currency -----------")
+print ("---------- Formatting Currency using the .format property-----------")
 amount = 123456.78
-currency = "${:,.2f}". format(amount)
+currency = "${:,.2f}". format(amount) 
 print(currency)
-print (f'${amount:,.2f}')
+print (f'${amount:,.2f}')  # can combine two or more formatting but needs to be in a specific order.
+# format_spec ::= [[fill]align][sign][#][0][width][grouping_option][.precision][type]
 
 
 

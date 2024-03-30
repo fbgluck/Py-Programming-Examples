@@ -1,7 +1,5 @@
-the_list = ['first','second','third']
-print (the_list)
-for i in range (0,3):
-    print (the_list[i])
+myname = "Mr. Gluck"
+myname = 1
+print(myname)
 
-for i in range(0,3):
-    print (i)
+
