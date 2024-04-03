@@ -1,5 +1,3 @@
-myname = "Mr. Gluck"
-myname = 1
-print(myname)
-
-
+import math
+print([round(math.tau, i) for i in range(1, 4)])
+print([round(math.tau) for i in range(1, 4)])
