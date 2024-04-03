@@ -45,6 +45,15 @@ location=shopping_list.index('bacon')
 print (f'bacon appears in the list as item number {location}')
 fn_line_seperator()
 
+# .count counts the number of times an item is in a list
+# Good for determining if an item is or is not in the list?
+fruits = ['apple', 'banana', 'cherry']
+x=fruits.count("cherry") # .count returns the number of times an item in in a list
+if x==0:
+   print (f"Item is not in the list") # count was 0
+else:
+   print (f"Item was in the list {x} times")
+     
 # We can assign one list to another variable to make a copy of it
 new_list = shopping_list
 print(f'shopping_list is: {shopping_list}')
@@ -62,8 +71,12 @@ fn_line_seperator()
 #.extend method -- extends a list from the print
 # This is an 'iterable' meaning it will do the
 #.extend over the list of items 
+shopping_list = ["item_one", "item_two"]
 shopping_list.extend(['flour','grapes','iodine'])
-print ('fExtended shopping_list is now: {shopping_list}')
+print (f'Extended shopping_list is now: {shopping_list}')
+# Iterate through the list so we get neat output
+for i in range(0,len(shopping_list)):
+   print (f'Item {i} is {shopping_list[i]}')
 fn_line_seperator()
 
 # # ************** .pop Method *******************
@@ -74,7 +87,7 @@ print ('The list is shorter now ....', shopping_list,'\n',30*'-','\n')
 shopping_list.pop(0)
 print ('The item at index 0 is gone', shopping_list,'\n',30*'-','\n')
 
-# # ***** Remove Method *************
+# # ***** .remove Method *************
 # ## .remove - removes the item with a specified value from the list. Works in place
 shopping_list.remove('carrots')
 print('Our shopping list is shorter..', shopping_list,'\n',30*'-','\n')
