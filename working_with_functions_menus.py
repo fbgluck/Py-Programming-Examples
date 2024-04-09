@@ -10,13 +10,15 @@ def display_menu():
     print ("\n")
     print ("[0] Exit The Program")
     print("\n**********************")
-    if input("What is your choice? >> ") in validChoice:
-      return validChoice
+    choice = input("What is your choice? >> ")
+    if choice in validChoice:
+      return choice
     else:
       return (-1)
 #End of Function Defs
 
-if display_menu() == -1:
+menuSelection = display_menu()
+if menuSelection == -1:
    print ("INVALID CHOICE")
 else:
-   print ("You made a valid choice from the menu")
+   print (f"Your choice from the menu was {menuSelection} and it was a valid choice.")
