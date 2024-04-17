@@ -43,3 +43,16 @@ points = {
 }
 
 print(ITN1_class["fgluck@sanford.org"])
+
+# From Python QOD
+game_pieces = {
+    "Chess": 32,
+    "Checkers": 24,
+    "Othello": 64,
+    "Deck of Cards": 52,
+    "Mancala": 48
+}
+
+# What is the correct way to retrieve the number of pieces for the game Mancala?
+
+print (f"The number of pieces for Mancala is: {game_pieces['Mancala']}")

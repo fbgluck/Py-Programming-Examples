@@ -100,6 +100,7 @@ print(f'The area of the field is: {total_area}')
 print(30*'-')
 input('Enter to continue....')
 # Now we will call the other functions
+
 print(fancy_av("\nThe absolute value is: ", 2))
 print(absolute_value(-4))
 
