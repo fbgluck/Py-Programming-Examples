@@ -5,7 +5,6 @@ test_dict = {
     1: "one",
     2: "two",
     3: "three"
-
 }
 # We retrieve items from a dictionary using the dictionary
 # name and specifying a key
