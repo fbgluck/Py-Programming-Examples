@@ -10,15 +10,17 @@ test_dict = {
 # name and specifying a key
 print("*** Return the value with the key of 2")
 print(test_dict[2])
+
 # iterating through a dict with a loop
-print("Iterate through a list with a loop")
+print("Iterate through specific items in a dictionary  with a loop")
 for i in range(1, 3):  # start at 1 stop before 3
     print(test_dict[i])
+
 # Methods used with Dictionaries
-# Return a list of all values in the dictionary
 test_dict[1] = "REPLACED" # Replace the value with the key of 1
 print("*** Return a List of all the values in a dictionary")
 print(test_dict.values())
+
 # Find the length of the dictionary (number of key:item pairs)
 dict_length = len(test_dict.values())
 print(f"*** The length of the dictionary is {dict_length} items")
