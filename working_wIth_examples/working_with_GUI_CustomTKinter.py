@@ -26,7 +26,8 @@ root.geometry("500x400")
 # Add a frame under a the root window
 frame = customtkinter.CTkFrame( # creates a frame where the master of this element is root
     master=root,
-    border_width=3) 
+    border_width=3
+) 
 
 # The Tkinter Geometry Manager places widgets onto the window at specific positions
 # ref: https://www.geeksforgeeks.org/python-gui-tkinter/#geometry-management
@@ -102,4 +103,5 @@ btnQuit.pack(padx=10,pady=10)
 
 # start the TKinter main loop
 root.mainloop()
+#
 print(f"Program Ends...")

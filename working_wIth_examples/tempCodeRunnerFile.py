@@ -1,2 +1,1 @@
-
-    master=root,
+btnQuit=customtkinter.CTkButton(
