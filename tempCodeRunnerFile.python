@@ -1,9 +1,14 @@
-ghosts = {
-        "Red Ghost" : "Blinky",
-        "Pink Ghost" : "Pinky",
-        "Blue Ghost" : "Inky",
-        "Orange Ghost" : "Clyde"
-}
+from tkinter import *
+from tkinter import ttk
+rootWin=Tk()
+style=ttk.Style()
+style.configure(style='ButtonDesign1.Toolbutton', font="Georgia 20 bold", width=10, anchor="center")
+style.map('ButtonDesign1.Toolbutton', background=[('active', '#ff00ff'), ('pressed', '#ff0000')])
+button = ttk.Button(rootWin, text="My Button", style='ButtonDesign1.Toolbutton')
+button.grid(row=0,column=0, padx=4, pady=4,columnspan=1 )
+# ********* Program Starts Here *******************
 
-for ghost in ghosts:
-    print(ghosts[ghost])
+# start the TKinter main loop
+rootWin.mainloop()
+#
+print(f"Program Ends...")
