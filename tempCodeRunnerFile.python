@@ -1,9 +1,9 @@
-dimensions = [
-                 [12, 3], 
-                 [45, 7],
-                 [1, 2]
-             ]
+ghosts = {
+        "Red Ghost" : "Blinky",
+        "Pink Ghost" : "Pinky",
+        "Blue Ghost" : "Inky",
+        "Orange Ghost" : "Clyde"
+}
 
-for row in dimensions:
-    area = row[0] * row[1]
-    print(area)
+for ghost in ghosts:
+    print(ghosts[ghost])

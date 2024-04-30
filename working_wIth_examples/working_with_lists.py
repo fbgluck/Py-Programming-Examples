@@ -24,6 +24,7 @@ fn_line_seperator()
 # How would you print a scorecard for SHS football for these 5 games. Hint -- user iteration / for / range
 
 
+
 # The first list entry is item "0"
 print (major_authors[3]) #gives you the fourth entry in the list
 fn_line_seperator()

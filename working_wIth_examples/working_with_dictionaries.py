@@ -16,6 +16,10 @@ print("Iterate through specific items in a dictionary  with a loop")
 for i in range(1, 3):  # start at 1 stop before 3
     print(test_dict[i])
 
+
+
+# ----------------------
+
 # Methods used with Dictionaries
 test_dict[1] = "REPLACED" # Replace the value with the key of 1
 print("*** Return a List of all the values in a dictionary")
@@ -55,6 +59,17 @@ game_pieces = {
 }
 # What is the correct way to retrieve the number of pieces for the game Mancala?
 print (f"The number of pieces for Mancala is: {game_pieces['Mancala']}")
+
+# Iterate through a dictionary
+ghosts = {
+        "Red Ghost" : "Blinky",
+        "Pink Ghost" : "Pinky",
+        "Blue Ghost" : "Inky",
+        "Orange Ghost" : "Clyde"
+}
+
+for ghost in ghosts:
+    print(ghosts[ghost])
 
 # Update a value in a dictionary
 
