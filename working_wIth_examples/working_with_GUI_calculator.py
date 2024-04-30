@@ -10,7 +10,7 @@ def numberButtonPressed(numPressed):
     global numstring
     answer.delete('1.0','end') # Clear the field in prep for the modified string
     numstring=numstring + numPressed #add the next number onto the string
-    answer.insert("end",numstring) #place the string into the textbox at the end of the contents 
+    answer.insert("end",numstring) #place the new string into the textbox at the end of the contents 
 
 # def mathOpPressed(operation):
 
