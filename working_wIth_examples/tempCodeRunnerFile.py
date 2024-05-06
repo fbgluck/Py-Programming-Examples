@@ -1,4 +1,1 @@
-where the master of this element is root
-    master=root,
-    border_width=3
-) 
+print(f'\n#16:: Easily Creating A Long String of the Same Characters')

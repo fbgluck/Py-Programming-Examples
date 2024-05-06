@@ -33,27 +33,26 @@ ones_place = 0
 english_string = " cents"
 # Dictionary of Names
 numeral_names = {
-    0: "zero",
-    1: "one",
-    2: "two",
-    3: "three",
-    4: "four",
-    5: "five",
-    6: "six",
-    7: "seven",
-    8: "eight",
-    9: "nine",
-    10: "ten",  # ten,zero
-    11: "Eleven",  # ten one
-    12: "Twelve",  # ten two
-    13: "Thirteen",
-    14: "Fourteen",
-    15: "Fifteen",
-    16: "Sixteen",
-    17: "Seventeen",
-    18: "Eighteen",
-    19: "Nineteen"
-
+    "00": "zero",
+    "01": "one",
+    "02": "two",
+    "03": "three",
+    "04": "four",
+    "05": "five",
+    "06": "six",
+    "07": "seven",
+    "08": "eight",
+    "09": "nine",
+    "10": "ten",  # ten,zero
+    "11": "Eleven",  # ten one
+    "12": "Twelve",  # ten two
+    "13": "Thirteen",
+    "14": "Fourteen",
+    "15": "Fifteen",
+    "16": "Sixteen",
+    "17": "Seventeen",
+    "18": "Eighteen",
+    "19": "Nineteen"
 
 }
 tens_places = {
@@ -81,28 +80,23 @@ places = {
 ####
 # Input the number to be translated
 text_numeral = input("What is the amount of the check?")
-# Convert it to Floating Point for later use
-float_numeral = float(text_numeral)
-# breaks up the floating part into whole part an decimal part
-# Returns a tuple - multiple items in a single variable.
-decimal_part, whole_part = math.modf(float_numeral)
-# More conversion so we can work with the numbers
+print (f"You entered - {text_numeral}")
+# Check to see if string has a decimal point
+decimal_location = text_numeral.find(".")
+if decimal_location < 0:
+    print(f"ERROR - You input {text_numeral}. This number must contain a decimal point")
+# Check to see that decimal point has only two characters following it
+if text_numeral[-3] != ".":
+    print(f"ERROR - Only two numbers can follow the decimal point")
 
-whole_part = int(whole_part)
-# decimal_part = int(decimal_part*100)
-decimal_part = int(text_numeral[-2:])
-print(f"You input: {float_numeral}")
-print(f"Whole Number part is: {whole_part}")
-print(f"Decimal part is: {decimal_part}")
-# Is there a decimal portion of the number?
-if decimal_part != 0:  # we found a decimal point
-    print(num_to_english(decimal_part, 1, english_string))
-# Work with Tens and Ones Numbers
-
-if whole_part > 0:
-    # Get the name of the numeral from the dictionary
-    # if whole_part > 0 and whole_part < 20:  # between 1 and 19
-    print({num_to_english(whole_part, 1, english_string)})
-    print(" dollars")
-    # else:
- #   num_to_english(float_numeral, 1)
+# Split string at the decimal point into two parts
+# whole part:
+# decimal part:
+splitString = text_numeral.split(".")
+whole_part=splitString[0]
+decimal_part=splitString[1]
+# Check that both parts have only numerical values
+if not(whole_part.isnumeric()):
+    print(f'Whole part of your entry {whole_part} can only be numeric')
+if not(decimal_part.isnumeric()):
+    print(f'Decimal part of your entry {decimal_part} can only be numeric')

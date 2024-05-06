@@ -21,7 +21,8 @@ rootWin.geometry("500x400")
 rootWin.title("Calculator")
 
 # Frame for buttons
-frmButton = customtkinter.CTkFrame(master=rootWin, width=20, height = 100, bg_color="red" )
+frmButton = customtkinter.CTkFrame(master=rootWin, width=20, height = 100  )
+frmButton.configure(fg_color='yellow')
 frmButton.grid(row=1, column=1, padx=4,)
 
 # Styles
@@ -83,7 +84,9 @@ btnNo0=customtkinter.CTkButton(master = frmButton, width=40, height=40,text = "0
 btnNo0.grid(row=4,column=3,padx=4,pady=4)
 
 btnEqual=customtkinter.CTkButton(master = frmButton, width=40, height=180,text = "=")
+btnEqual.configure(fg_color='red',bg_color="yellow")
 btnEqual.grid(row=1,column=6,rowspan=4, padx=4,pady=4,sticky="N")
+
 
 # ********* Program Starts Here *******************
 
