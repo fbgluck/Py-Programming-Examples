@@ -30,19 +30,29 @@ def num_to_english(num, digit_place, result_string):
 
 # Initialize variables
 ones_place = 0
-english_string = " cents"
+english_string = " and "
 # Dictionary of Names
 numeral_names = {
     "00": "zero",
+    "0":"zero",
     "01": "one",
+    "1":"one",
     "02": "two",
+    "2":"two",
     "03": "three",
+    "3": "three",
     "04": "four",
+    "4": "four",
     "05": "five",
+    "5": "five",
     "06": "six",
+    "6": "six",
     "07": "seven",
+    "7": "seven",
     "08": "eight",
+    "8": "eight",
     "09": "nine",
+    "9": "nine",
     "10": "ten",  # ten,zero
     "11": "Eleven",  # ten one
     "12": "Twelve",  # ten two
@@ -56,16 +66,14 @@ numeral_names = {
 
 }
 tens_places = {
-    0: "",
-    1: "",
-    2: "twenty",
-    3: "thirty",
-    4: "fourty",
-    5: "fifty",
-    6: "sixty",
-    7: "seventy",
-    8: "eighty",
-    9: "ninety"
+    "2": "twenty",
+    "3": "thirty",
+    "4": "fourty",
+    "5": "fifty",
+    "6": "sixty",
+    "7": "seventy",
+    "8": "eighty",
+    "9": "ninety"
 }
 
 places = {
@@ -90,8 +98,6 @@ if text_numeral[-3] != ".":
     print(f"ERROR - Only two numbers can follow the decimal point")
 
 # Split string at the decimal point into two parts
-# whole part:
-# decimal part:
 splitString = text_numeral.split(".")
 whole_part=splitString[0]
 decimal_part=splitString[1]
@@ -100,3 +106,24 @@ if not(whole_part.isnumeric()):
     print(f'Whole part of your entry {whole_part} can only be numeric')
 if not(decimal_part.isnumeric()):
     print(f'Decimal part of your entry {decimal_part} can only be numeric')
+
+print(f"Left of number: {whole_part}")
+print(f"Right part of number: {decimal_part}")
+
+# append the decimal part to the result string
+english_string = english_string + decimal_part +"/100"
+
+# start working on the whole part of the number
+print(f"processing: {whole_part[-2:]}") # find the rightmost two digits
+
+# Numbers below twenty (e.g. the 'teens') are handled differently than the rest of the numbers
+if int(whole_part[-2:]) < 20: # handle numbers below twenty
+    # Retrieve the numeral name by the right 2 digits of the whole number part
+    english_string = numeral_names[whole_part[-2:]] + english_string 
+    print (english_string)
+else: # handle >=20
+    if whole_part[-2] == "2" and whole_part[-1:] == "0":  # Process twenty
+            english_string = tens_places["2"] + english_string
+    else:
+        english_string = tens_places [whole_part[-2:-1]] +" " + numeral_names[whole_part[-1:]] + english_string
+print(f"result: {english_string}")                                                                        
