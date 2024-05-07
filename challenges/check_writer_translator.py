@@ -54,15 +54,15 @@ numeral_names = {
     "09": "nine",
     "9": "nine",
     "10": "ten",  # ten,zero
-    "11": "Eleven",  # ten one
-    "12": "Twelve",  # ten two
-    "13": "Thirteen",
-    "14": "Fourteen",
-    "15": "Fifteen",
-    "16": "Sixteen",
-    "17": "Seventeen",
-    "18": "Eighteen",
-    "19": "Nineteen"
+    "11": "eleven",  # ten one
+    "12": "twelve",  # ten two
+    "13": "thirteen",
+    "14": "fourteen",
+    "15": "fifteen",
+    "16": "sixteen",
+    "17": "seventeen",
+    "18": "eighteen",
+    "19": "nineteen"
 
 }
 tens_places = {
@@ -122,8 +122,21 @@ if int(whole_part[-2:]) < 20: # handle numbers below twenty
     english_string = numeral_names[whole_part[-2:]] + english_string 
     print (english_string)
 else: # handle >=20
-    if whole_part[-2] == "2" and whole_part[-1:] == "0":  # Process twenty
-            english_string = tens_places["2"] + english_string
-    else:
-        english_string = tens_places [whole_part[-2:-1]] +" " + numeral_names[whole_part[-1:]] + english_string
+    if whole_part[-1:]=="0": # First process 20, 30, 40, 50 ...90
+        english_string = tens_places[whole_part[-2]] + english_string
+    else: # then the other numbers with two places (e.g. 23, 64 ...etc)
+        english_string = tens_places[whole_part[-2]] + " " + numeral_names[whole_part[-1]] + english_string
+#If there is a hundreds place, process it
+if len(whole_part) > 2:
+    print(f"Length of whole part: {len(whole_part)}")
+    for numDigits in range (3,len(whole_part)+1):
+        print (f"Processing digit {numDigits}")
+        #if numDigits == 3:
+            #print(f"NumDigits: {numDigits}")
+            #print(f"whole part: {str(whole_part[-(numDigits)])}") # pick out the part of the string
+            #print (f"Numeral name: {numeral_names[str(numDigits)]}")
+        english_string = numeral_names[str(whole_part[-(numDigits)])] + " " +  places[(numDigits)] +" " + english_string
+
+        
+  
 print(f"result: {english_string}")                                                                        
